@@ -1,4 +1,5 @@
 package com.example.ironBank.models.account;
 
-public class Status {
+public enum Status {
+    FROZEN, ACTIVE
 }
