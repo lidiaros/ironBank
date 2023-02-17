@@ -50,9 +50,9 @@ public class IronBankApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		AccountHolders accountHolders1 = accountHoldersRepository.save(new AccountHolders("Alejandro", LocalDate.of(1956, 12, 8), new Address(), "ale@es.com"));
-		AccountHolders accountHolders2 = accountHoldersRepository.save(new AccountHolders("Gonzalo", LocalDate.of(1960, 9, 03), null, "gonzalo@es.com"));
-		AccountHolders accountHolders3 = accountHoldersRepository.save(new AccountHolders("Víctor", LocalDate.of(1997, 9, 2), null, "victor@es.com"));
-		AccountHolders accountHolders4 = accountHoldersRepository.save(new AccountHolders("Susana", LocalDate.of(1972, 2, 1), null, "susana@es.com"));
+		AccountHolders accountHolders2 = accountHoldersRepository.save(new AccountHolders("Sebi", LocalDate.of(1960, 9, 03), null, "sebi@es.com"));
+		AccountHolders accountHolders3 = accountHoldersRepository.save(new AccountHolders("Alex", LocalDate.of(1997, 9, 2), null, "alex@es.com"));
+		AccountHolders accountHolders4 = accountHoldersRepository.save(new AccountHolders("Carla", LocalDate.of(1972, 2, 1), null, "carla@es.com"));
 		AccountHolders accountHolders5 = accountHoldersRepository.save(new AccountHolders("Ana", LocalDate.of(1962, 6, 18), null, "ana@es.com"));
 
 		CheckingAccount account1 = checkingAccountRepository.save(new CheckingAccount(new BigDecimal(4420.10), 1234, accountHolders1, null, new BigDecimal(1.10), new BigDecimal(10.09), new BigDecimal(12.0)));
@@ -61,8 +61,8 @@ public class IronBankApplication implements CommandLineRunner {
 		SavingsAccount account4 = savingsAccountRepository.save(new SavingsAccount(new BigDecimal(9293.19), 9328, accountHolders4, null, new BigDecimal(0.8), new BigDecimal(4.0), new BigDecimal(12.0)));
 		CreditCard account5 = creditCardRepository.save(new CreditCard(new BigDecimal(4349.00), 8371, accountHolders5, null, new BigDecimal(0.6), new BigDecimal(10000), new BigDecimal(6.1)));
 
-		Admins admin1 = adminsRepository.save(new Admins("Jordi"));
+		Admins admin1 = adminsRepository.save(new Admins());
 
-		ThirdParty thirdParty1 = thirdPartyRepository.save(new ThirdParty("131", "Joan"));
+		ThirdParty thirdParty1 = thirdPartyRepository.save(new ThirdParty());
 	}
 }
